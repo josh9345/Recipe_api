@@ -8,13 +8,13 @@ module.exports = {
       })
   },
   showid: (req, res) => {
-    Recipe.find({id: req.params.id})
+    Recipe.find({_id: req.params.id})
       .then(recipe => {
         res.json(recipe)
       })
   },
   showName: (req, res) => {
-    Recipe.find({name: req.params.name})
+    Recipe.find({title: req.params.name})
       .then(recipe => {
         res.json(recipe)
       })

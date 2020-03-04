@@ -7,6 +7,18 @@ module.exports = {
         res.json(recipe)
       })
   },
+  ShowIng: (req, res) =>{
+    Recipe.find({ingredients: req.params.ingredients})
+        .then(recipe => {
+            res.json(recipe)
+        })
+  },
+  showDish: (req, res) =>{
+    Recipe.find({dishTypes: req.params.dishType})
+        .then(recipe => {
+            res.json(recipe)
+        })
+  },
   showid: (req, res) => {
     Recipe.find({_id: req.params.id})
       .then(recipe => {

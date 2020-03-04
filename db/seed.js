@@ -15,18 +15,19 @@ const recipeData = data.map(item =>{
         dishTypes: item.dishTypes.split(','),
         ingredients: item.ingredients.split(','),
         calories: item.calories,
-        ["Fat/g"]: ['item.Fat/g'],
-        ["Saturated-Fat/g"]: ['item.Saturated-Fat/g'],
-        ["Carbohydrates/g"]: ['item.Carbohydrates/g'],
-        ["Sugar/g"]: ['item.Sugar/g'],
-        ["Cholesterol/mg"]: ['item.Cholesterol/mg'],
-        ["Sodium/mg"]: ['item.Sodium/mg'],
-        ["Protein/g"]: ['item.Protein/g'],
+        Fat: item.Fat,
+        SaturatedFat: item.SaturatedFat,
+        Carbohydrates: item.Carbohydrates,
+        Sugar: item.Sugar,
+        Cholesterol: item.Cholesterol,
+        Sodium: item.Sodium,
+        Protein: item.Protien,
     }
     return recipes
 })
 
-recipe.remove({})
+recipe.remove({}).then(() =>{
 recipe.create(recipeData).then(recipes=>{
     console.log(recipes)
-})
+    })
+});

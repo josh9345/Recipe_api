@@ -13,13 +13,13 @@ const recipes = new Schema({
     dishTypes: [String],
     ingredients: [String],
     calories: Number,
-    ["Fat/g"]: Number,
-    ["Saturated-Fat/g"]: Number,
-    ["Carbohydrates/g"]: Number,
-    ["Sugar/g"]: Number,
-    ["Cholesterol/mg"]: Number,
-    ["Sodium/mg"]: Number,
-    ["Protein/g"]: Number,
+    Fat: Number,
+    SaturatedFat: Number,
+    Carbohydrates: Number,
+    Sugar: Number,
+    Cholesterol: Number,
+    Sodium: Number,
+    Protein: Number,
 })
 
 module.exports = mongoose.model('Recipes', recipes)

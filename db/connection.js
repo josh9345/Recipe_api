@@ -1,3 +1,3 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/HarryPotter', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/Recipes', {useNewUrlParser: true});
 module.exports = mongoose;

@@ -10,7 +10,7 @@ const recipes = new Schema({
     readyInMinutes: Number,
     spoonacularSourceUrl: String,
     image: String,
-    dishTypes: [String],
+    dishTypes: String,
     ingredients: [String],
     calories: Number,
     Fat: Number,

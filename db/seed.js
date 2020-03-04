@@ -19,8 +19,8 @@ const recipeData = data.map(item =>{
         ["Saturated-Fat/g"]: item.Saturated-Fat/g,
         ["Carbohydrates/g"]: item.Carbohydrates/g,
         ["Sugar/g"]: item.Sugar/g,
-        ["Cholesterol/mg"]: item.,
-        ["Sodium/mg"]: item.,
+        ["Cholesterol/mg"]: item.Cholesterol/mg,
+        ["Sodium/mg"]: item.Sodium/mg,
         ["Protein/g"]: item.,
     }
     return recipes

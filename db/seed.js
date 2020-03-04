@@ -15,18 +15,18 @@ const recipeData = data.map(item =>{
         dishTypes: item.dishTypes.split(','),
         ingredients: item.ingredients.split(','),
         calories: item.calories,
-        ["Fat/g"]: item.Fat/g,
-        ["Saturated-Fat/g"]: item.Saturated-Fat/g,
-        ["Carbohydrates/g"]: item.Carbohydrates/g,
-        ["Sugar/g"]: item.Sugar/g,
-        ["Cholesterol/mg"]: item.Cholesterol/mg,
-        ["Sodium/mg"]: item.Sodium/mg,
-        ["Protein/g"]: item.,
+        ["Fat/g"]: ['item.Fat/g'],
+        ["Saturated-Fat/g"]: ['item.Saturated-Fat/g'],
+        ["Carbohydrates/g"]: ['item.Carbohydrates/g'],
+        ["Sugar/g"]: ['item.Sugar/g'],
+        ["Cholesterol/mg"]: ['item.Cholesterol/mg'],
+        ["Sodium/mg"]: ['item.Sodium/mg'],
+        ["Protein/g"]: ['item.Protein/g'],
     }
     return recipes
 })
 
 recipe.remove({})
-recipe.create(data).then(recipes=>{
+recipe.create(recipeData).then(recipes=>{
     console.log(recipes)
 })

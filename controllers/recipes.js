@@ -30,11 +30,5 @@ module.exports = {
       .then(recipe => {
         res.json(recipe)
       })
-  },
-  create: (req, res) => {
-    Recipe.create(req.body)
-      .then(recipe => {
-        res.json(recipe)
-      })
   }
 }

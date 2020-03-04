@@ -1,10 +1,28 @@
-const express = require('express')
-const router = express.Router();
-const Recipe = require('../controllers/recipes')
+const Recipe = require('../models/Recipes')
 
-router.get('/', Recipe.index)
-router.get('/year/:year', Recipe.showYear)
-router.get('/:name', Recipe.showName)
-router.post('/', Recipe.create)
-
-module.exports = router
+module.exports = {
+  index: (req, res) => {
+    Recipe.find({})
+      .then(recipe => {
+        res.json(recipe)
+      })
+  },
+  showid: (req, res) => {
+    Recipe.find({id: req.params.id})
+      .then(recipe => {
+        res.json(recipe)
+      })
+  },
+  showName: (req, res) => {
+    Recipe.find({name: req.params.name})
+      .then(recipe => {
+        res.json(recipe)
+      })
+  },
+  create: (req, res) => {
+    Recipe.create(req.body)
+      .then(recipe => {
+        res.json(recipe)
+      })
+  }
+}

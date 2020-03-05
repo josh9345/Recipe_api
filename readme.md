@@ -1,6 +1,6 @@
 # Getting started
 
-### This api allows you to serch and pull recipe data from over 15,000 unique dishes. you can pull all dat or search by values such as individual ingredients and name of the dish you are looking for.
+### This api allows you to serch and pull recipe data from over 15,000 unique dishes. you can fetch all data or search by values such as individual ingredients and name of the dish you are looking for.
 
 # Url and Paths
 
@@ -12,4 +12,27 @@
 ### /recipes/id/{id}: this path fetches recipes by the its unique id.
 ### /recipes/ingredients/{ingredients}: this path fetches recipes based on whether or not the specified ingredient is present in the recipe. ex:http://localhost:3000/recipes/ingredients/anchovies
 ### /recipes/dishType/{dishType}: this fetches recipes based on the type of dish. ex: http://localhost:3000/recipes/dishType/lunch
+
+## POST
+### url: http://localhost:3000/recipes.
+### using this method allows you to enter your very own recipe data to this database! 
+### Example format for data being created: 
+###   title: String,
+###   pricePerServing: Number,
+###   weightPerServing: Number,
+###   vegetarian: Boolean,
+###   veryPopular: Boolean,
+###   readyInMinutes: Number,
+###   spoonacularSourceUrl: String,
+###   image: String,
+###   dishTypes: [String],
+###   ingredients: [String],
+###   calories: Number,
+###   Fat: Number,
+###   SaturatedFat: Number,
+###   Carbohydrates: Number,
+###   Sugar: Number,
+###   Cholesterol: Number,
+###   Sodium: Number,
+###   Protein: Number,
 

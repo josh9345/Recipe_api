@@ -5,7 +5,7 @@ const recipe = require('../models/Recipes')
 
 const recipeData = data.map(item =>{
     const recipes = {
-        title: item.title,
+        title: item.title.toLowerCase(),
         pricePerServing: item.pricePerServing,
         weightPerServing: item.weightPerServing,
         vegetarian: item.vegetarian,
@@ -13,8 +13,8 @@ const recipeData = data.map(item =>{
         readyInMinutes: item.readyInMinutes,
         spoonacularSourceUrl: item.spoonacularSourceUrl,
         image: item.image,
-        dishTypes: item.dishTypes.split(','),
-        ingredients: item.ingredients.split(','),
+        dishTypes: item.dishTypes.toLowerCase().split(','),
+        ingredients: item.ingredients.toLowerCase().split(','),
         calories: item.calories,
         Fat: item.Fat,
         SaturatedFat: item.SaturatedFat,
@@ -22,7 +22,7 @@ const recipeData = data.map(item =>{
         Sugar: item.Sugar,
         Cholesterol: item.Cholesterol,
         Sodium: item.Sodium,
-        Protein: item.Protien,
+        Protein: item.Protien
     }
     return recipes
 })

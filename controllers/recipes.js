@@ -8,13 +8,13 @@ module.exports = {
       })
   },
   ShowIng: (req, res) =>{
-    Recipe.find({ingredients: req.params.ingredients})
+    Recipe.find({ingredients: req.params.ingredients.toLowerCase()})
         .then(recipe => {
             res.json(recipe)
         })
   },
   showDish: (req, res) =>{
-    Recipe.find({dishTypes: req.params.dishType})
+    Recipe.find({dishTypes: req.params.dishType.toLowerCase()})
         .then(recipe => {
             res.json(recipe)
         })
@@ -26,7 +26,7 @@ module.exports = {
       })
   },
   showName: (req, res) => {
-    Recipe.find({title: req.params.name})
+    Recipe.find({title: req.params.name.toLowerCase()})
       .then(recipe => {
         res.json(recipe)
       })

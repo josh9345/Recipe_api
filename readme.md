@@ -17,6 +17,7 @@
 ### url: http://localhost:3000/recipes.
 ### using this method allows you to enter your very own recipe data to this database! 
 ### Example format for data being created: 
+###   {
 ###   title: String,
 ###   pricePerServing: Number,
 ###   weightPerServing: Number,
@@ -35,4 +36,5 @@
 ###   Cholesterol: Number,
 ###   Sodium: Number,
 ###   Protein: Number,
+###   }
 

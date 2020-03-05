@@ -6,7 +6,7 @@
 
 ## GET
 ###  Note: the request parameters are not case sensitive!
-### base url: http://localhost3000
+### base url: http://localhost:3000/recipes
 ### /recipes: this path returns all available recipe
 ### /recipes/name/{name}: this path allows you to search for dishes by their specific name. ex: http://localhost3000/recipes/name/Fried20%Anchovies20%with20%Sage.
 ### /recipes/id/{id}: this path fetches recipes by the its unique id.

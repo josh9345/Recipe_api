@@ -8,7 +8,7 @@
 ###  Note: the request parameters are not case sensitive!
 ### base url: http://localhost:3000/recipes
 ### /recipes
-### this path returns all available recipe
+### this path returns all available recipes
 ### /recipes/name/{name}
 ### this path allows you to search for dishes by their specific name. ex: http://localhost:3000/recipes/name/Fried%20Anchovies%20with%20Sage.
 ### /recipes/id/{id}

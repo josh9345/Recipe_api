@@ -5,9 +5,11 @@
 # Url and Paths
 
 ## GET
-### /
-### router.get('/name/:name', Recipe.showName)
-### router.get('/id/:id', Recipe.showid)
-### router.get('/ingredients/:ingredients', Recipe.ShowIng)
-### router.get('/dishType/:dishType', Recipe.showDish)
-### router.post('/', Recipe.create)
+###  Note: the request parameters are not case sensitive!
+### base url: http://localhost3000
+### /recipes: this path returns all available recipe
+### /recipes/name/{name}: this path allows you to search for dishes by their specific name. ex: http://localhost3000/recipes/name/Fried Anchovies with Sage.
+### /recipes/id/{id}: this path fetches recipes by the its unique id.
+### /recipes/ingredients/{ingredients}: this path fetches recipes based on whether or not the specified ingredient is present in the recipe. ex:http://localhost3000/recipes/ingredients/anchovies
+### /recipes/dishType/{dishType}: this fetches recipes based on the type of dish. ex: http://localhost3000/recipes/dishType/lunch
+

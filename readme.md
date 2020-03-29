@@ -1,53 +1,70 @@
+# Josh's Recipe API!
+
+This API was built to be simple and easy to use, so anyone has access to over 15,00 recipes. with the ability to search by ingredient, unique id, and The type of dish. this was built using mongoose, express, node.js, and JSON for storing the data.
+
 # Getting started
 
-### This api allows you to serch and pull recipe data from over 15,000 unique dishes. you can fetch all data or search by values such as individual ingredients and name of the dish you are looking for.
+url: https://josh-recipe-api.herokuapp.com/recipes
+this will display all recipes. (see routes below for specific search parameters)
+
+# bugs and errors
+
+1. there is a recipe that contains every ingredient so it shows up on every search.
 
 # Url and Paths
 
-## GET
-###  Note: the request parameters are not case sensitive!
-### base url: http://localhost:3000/recipes
-### /recipes
-### this path returns all available recipes
-### /recipes/name/{name}
-### this path allows you to search for dishes by their specific name. ex: http://localhost:3000/recipes/name/Fried%20Anchovies%20with%20Sage.
-### /recipes/id/{id}
-### this path fetches recipes by the its unique id.
-### /recipes/ingredients/{ingredients} 
-### this path fetches recipes based on whether or not the specified ingredient is present in the recipe. ex:http://localhost:3000/recipes/ingredients/anchovies
-### /recipes/dishType/{dishType}
-### this fetches recipes based on the type of dish. ex: http://localhost:3000/recipes/dishType/lunch
+### GET
 
-## POST
-### url: http://localhost:3000/recipes.
-### This method allows you to enter your very own recipe data to this database! 
-### Example format for data being created: 
-###   {
-###   title: String,
-###   pricePerServing: Number,
-###   weightPerServing: Number,
-###   vegetarian: Boolean,
-###   veryPopular: Boolean,
-###   readyInMinutes: Number,
-###   spoonacularSourceUrl: String,
-###   image: String,
-###   dishTypes: [String],
-###   ingredients: [String],
-###   calories: Number,
-###   Fat: Number,
-###   SaturatedFat: Number,
-###   Carbohydrates: Number,
-###   Sugar: Number,
-###   Cholesterol: Number,
-###   Sodium: Number,
-###   Protein: Number,
-###   }
+Note: the request parameters are not case sensitive!
+base url: https://josh-recipe-api.herokuapp.com/recipes
+/recipes
+this path returns all available recipes
+/recipes/name/{name}
+this path allows you to search for dishes by their specific name. ex: https://josh-recipe-api.herokuapp.com/recipes/name/Fried%20Anchovies%20with%20Sage.
+/recipes/id/{id}
+this path fetches recipes by the its unique id.
+/recipes/ingredients/{ingredients}
+this path fetches recipes based on whether or not the specified ingredient is present in the recipe. ex:https://josh-recipe-api.herokuapp.com/recipes/ingredients/anchovies
+/recipes/dishType/{dishType}
+this fetches recipes based on the type of dish. ex: https://josh-recipe-api.herokuapp.com/recipes/dishType/lunch
 
-# Authentication
-### none required.
+### POST
+
+url: https://josh-recipe-api.herokuapp.com/recipes.
+This method allows you to enter your very own recipe data to this database!
+Example format for data being created:
+{
+title: String,
+pricePerServing: Number,
+weightPerServing: Number,
+vegetarian: Boolean,
+veryPopular: Boolean,
+readyInMinutes: Number,
+spoonacularSourceUrl: String,
+image: String,
+dishTypes: [String],
+ingredients: [String],
+calories: Number,
+Fat: Number,
+SaturatedFat: Number,
+Carbohydrates: Number,
+Sugar: Number,
+Cholesterol: Number,
+Sodium: Number,
+Protein: Number,
+}
+
+# Technologies used
+
+1. Mongoose
+2. express
+3. node.js
+4. JSON
 
 # Examples
-### http://localhost:3000/recipes/name/Fried%20Anchovies%20with%20Sage  will return
+
+https://josh-recipe-api.herokuapp.com/recipes/name/Fried%20Anchovies%20with%20Sage will return
+
 ```
 [
   {
@@ -86,4 +103,3 @@
   }
 ]
 ```
-
